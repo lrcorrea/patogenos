@@ -6,12 +6,9 @@ public class Processamento
     public Processamento(){
         points = 0;
     }
-    
     public int setPoints(int points){
         this.points += points;
-        System.out.println("soma ponto: "+this.points);
         if(this.points>=100){
-            //System.out.println("CHAMAR METODO PARA ENVIAR ALERTA FDP CUZAO, SE LIGA VIADO");
             clearPoints();
             return 1;
         }
