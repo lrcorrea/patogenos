@@ -5,7 +5,6 @@ import java.util.Iterator;
 public class Interface {
     private ArrayList<String> tabela = new ArrayList();
     private Processamento processamento = new Processamento();
-    private String[] infBack = null;
     public void menu(){
         
         LeiaCSV obj = new LeiaCSV();
@@ -22,5 +21,7 @@ public class Interface {
                 System.out.println("dia: "+dia+" - hora: "+hra);
             }
         }
+        
+        ListaPessoa test = new ListaPessoa("Lucas", "administrador", "998877665544", false, "");
     }
 }
