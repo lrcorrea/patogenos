@@ -16,7 +16,6 @@ public class Persistencia {
     public void salvarEmArquivo(Trabalhador l){
         try
         {
-            System.err.print(l.getNome());
             FileOutputStream fos = new FileOutputStream("arq.obj");
             ObjectOutputStream escreve = new ObjectOutputStream(fos);
             escreve.writeObject(l);
