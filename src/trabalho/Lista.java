@@ -13,9 +13,6 @@ public class Lista implements Serializable {
         this.tipos.add(tipo);
     }
     public ArrayList<Trabalhador> getLista(){
-        for (Trabalhador s : lista) {
-            System.out.println("Classe: "+s.getNome());
-        }
         return this.lista;
     }
 }
