@@ -12,6 +12,7 @@ public class Interface {
     private Processamento processamento = new Processamento();
     
     public void menu(){
+        /*
         //LE A TABELA
         /*LeiaCSV obj = new LeiaCSV();
         tabela = obj.run();
@@ -37,9 +38,8 @@ public class Interface {
         
         
         //INSTANCIO A CLASSE LISTA
-        Lista lista = new Lista();
-        //INSTANCIO A CLASSE PERSISTENCIA
-        //Persistencia persistencia = new Persistencia();
+        //Lista lista = new Lista();
+        
         
         //Trabalhador t; String nome; String cpf; int idade; String senha;
         
@@ -60,7 +60,9 @@ public class Interface {
         
         //FAÇO TESTE SALVANDO EM UMA VAR TEMPORARIA O OBJETO PRA MANDAR PRA CLASSE QUE VAI SALVAR ESSE OBJETO
         //TEMPORARIO NA LISTA
-        Engenheiro temp = new Engenheiro("Lucas", "123345", 12, "123");
+        
+        
+        /*Engenheiro temp = new Engenheiro("Lucas", "123345", 12, "123");
         lista.salvarLista(temp, "eng");
         
         temp = new Engenheiro("Lucas2", "6165", 11, "654");
@@ -73,7 +75,9 @@ public class Interface {
         lista.salvarLista(temp, "eng");
         
         //AQUI EU CARREGO A LISTA ONDE TÁ SALVO OS OBJETOS...
-        listaPessoas = lista.getLista();
+        listaPessoas = lista.getLista();*/
+        
+        
         //IMPRIMO PARA TESTA A LISTA Q RETORNA
         /*for (Trabalhador s : listaPessoas) {
             //s RECEBE A POSIÇÃO 0 DOS OBJETOS ListaDePessoas
@@ -82,22 +86,28 @@ public class Interface {
             System.out.println("Classe: "+s.getNome());
         }*/
         
+        /*//INSTANCIO E JA SETO A VARIAVEL LOGIN E SENHA
+        //Login login = new Login("Lucas4", "684684");
+        //MANDO A LISTA COM OS OBJETOS DA LISTA E SE BATER SENHA E LOGIN RETORNA TRUE
+        //boolean isAuth = login.auth(listaPessoas);
+        //System.out.println("retorno isAuth: "+isAuth);
         
-        Login login = new Login("Lucas4", "684684");
-        boolean isAuth = login.auth(listaPessoas);
-        System.out.println("retorno isAuth: "+isAuth);
-        //persistencia.salvarEmArquivo(temp);
+        //INSTANCIO A CLASSE PERSISTENCIA
+        Persistencia persistencia = new Persistencia();
+        //persistencia.salvarEmArquivo(listaPessoas);
         
-        
-        
-        
-        
-        //Lista l = new Lista(50);//apagar essa linha, é so um teste pra recuperar o objeto sem salvar um novo
-        /*Trabalhador test = persistencia.recuperaLista();
-        System.out.println(test.getNome());
-        System.out.println(test.getIdade());
-        System.out.println(test.getCpf());
-        System.out.println(test.getSenha());*/
+        //ListaPessoa é o objeto q ta preparado pra receber o retorno do Persistencia.recuperaLista
+        //que é um arraylist do tipo trabalhador
+        listaPessoas = persistencia.recuperaLista();
+        System.out.println(getClass());
+        //Imprimo pra ver se ele trouxe os objetos
+        System.out.println(listaPessoas);
+        for (Trabalhador s : listaPessoas) {
+            //for pra imprimir os objetos trazidos do arquivo "arq.obj"
+            System.out.println("Nome: "+s.getNome());
+            System.out.println("Idade: "+s.getIdade());
+            System.out.println("Cpf: "+s.getCpf());
+            System.out.println("Senha: "+s.getSenha());
+        }*/
     }
-
 }

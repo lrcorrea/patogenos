@@ -11,9 +11,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 
 public class Persistencia {
-    public void salvarEmArquivo(Trabalhador l){
+    public void salvarEmArquivo(ArrayList<Trabalhador> l){
         try
         {
             FileOutputStream fos = new FileOutputStream("arq.obj");
@@ -27,14 +28,14 @@ public class Persistencia {
         }
     }
     
-    public Trabalhador recuperaLista()
+    public ArrayList<Trabalhador> recuperaLista()
     {
-        Engenheiro lista = new Engenheiro();
+        ArrayList<Trabalhador> lista = new ArrayList<Trabalhador>();
         try
         {
             FileInputStream fis = new FileInputStream("arq.obj");
             ObjectInputStream leitor = new ObjectInputStream(fis);
-            lista = (Engenheiro) leitor.readObject();
+            lista = (ArrayList<Trabalhador>) leitor.readObject();
         }
         catch(FileNotFoundException e)
         {
