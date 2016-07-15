@@ -1,28 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package trabalho;
 
 import java.io.Serializable;
 
-/**
- *
- * @author poligno
- */
 public class Engenheiro extends Trabalhador implements Serializable {
-    private String senha;
+    private Alerta alerta;
     
     
-    public Engenheiro(String nome, String cpf, int idade, String senha){
+    public Engenheiro(String nome, String cpf, int idade,String login,String senha){
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
+        this.login = login;
         this.senha = senha;
+        this.acesso = "Engenheiro";
     }
     public Engenheiro(){}
-    
+
     @Override
     public String getSenha() {
         return senha;

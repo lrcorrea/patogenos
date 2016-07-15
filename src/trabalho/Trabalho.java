@@ -8,11 +8,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Trabalho{ 
         
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        new Interface().menu();
+        new Interface().menu();   
     }
-    
 }

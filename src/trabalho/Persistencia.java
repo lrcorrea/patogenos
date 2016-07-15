@@ -14,6 +14,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Persistencia {
+    
     public void salvarEmArquivo(ArrayList<Trabalhador> l){
         try
         {

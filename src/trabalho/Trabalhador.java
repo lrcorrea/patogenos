@@ -6,10 +6,17 @@ public abstract class Trabalhador implements Serializable {
      protected String nome;
      protected String cpf;
      protected int idade;
-     protected String senha;   
-
+     protected String login;
+     protected String senha;  
+     protected String acesso;  
+     protected boolean pulverizado; 
+     
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    public void setLogin(String senha) {
+        this.senha = senha;
     }
 
     public void setCpf(String cpf) {
@@ -23,9 +30,17 @@ public abstract class Trabalhador implements Serializable {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public void setPulverizado(boolean pulverizado) {
+        this.pulverizado = pulverizado;
+    }
     
     public String getNome() {
         return nome;
+    }
+    
+    public String getLogin() {
+        return login;
     }
 
     public String getCpf() {
@@ -39,6 +54,12 @@ public abstract class Trabalhador implements Serializable {
     public int getIdade() {
         return idade;
     }
-     
-     
+    
+    public String getAcesso() {
+        return acesso;
+    }
+    
+    public boolean getPulverizado() {
+        return pulverizado;
+    }
 }

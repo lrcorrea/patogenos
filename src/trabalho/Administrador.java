@@ -8,14 +8,16 @@ package trabalho;
 import java.util.logging.Logger;
 
 public class Administrador extends Trabalhador {
-    private String senha;
     
-    public Administrador(String nome, String cpf, int idade, String senha){
+    public Administrador(String nome, String cpf, int idade,String login,String senha){
         this.nome = nome;
         this.cpf = cpf;
         this.idade = idade;
-        this.senha = senha;
+        this.login=login;
+        this.senha=senha;
+        this.acesso = "Administrador";
     }
+    
     public Administrador(){}
 
     @Override

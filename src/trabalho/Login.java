@@ -14,11 +14,13 @@ public class Login {
     
     public boolean auth(ArrayList<Trabalhador> listaPessoas){
         for (Trabalhador s : listaPessoas) {
-            System.out.println("teste senha: "+s.getSenha()+" == "+this.senha);
-            if(s.getSenha() == this.senha && s.getNome() == this.login){
+            if(s.getSenha().equals(this.senha) && s.getLogin().equals(this.login)){
+                //this.tipo = s.getAcesso();
+                //return s.getAcesso();
                 return true;
             }
         }
+        //return "";
         return false;
     }
 }
